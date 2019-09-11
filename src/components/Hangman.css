@@ -1,8 +1,14 @@
 .Hangman {
-  width: 400px;
+  width: 600px;
   color: black;
   text-align: center;
   zoom: 1.3;
+}
+
+.Hangman-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .Hangman img {
@@ -11,6 +17,7 @@
 }
 
 .Hangman h1 {
+  display: block;
   font-size: 4rem;
   font-weight: 100;
   margin-bottom: 0.1em;

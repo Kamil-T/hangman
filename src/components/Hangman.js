@@ -65,13 +65,19 @@ class Hangman extends Component {
     return (
       <div className='Hangman'>
         <h1>Hangman</h1>
-        <img src={this.props.images[this.state.nWrong]} alt={wrongGuesses} />
-        <p>{wrongGuesses}</p>
-        <p className='Hangman-word'>{gameActive ? this.guessedWord() : this.state.answer}</p>
-        <p className='Hangman-btns'>{gameState}</p>
-        <button id='reset' onClick={this.reset}>
-          Restart
-        </button>
+        <div className='Hangman-elements'>
+          <div>
+            <img src={this.props.images[this.state.nWrong]} alt={wrongGuesses} />
+          </div>
+          <div>
+            <p>{wrongGuesses}</p>
+            <p className='Hangman-word'>{gameActive ? this.guessedWord() : this.state.answer}</p>
+            <p className='Hangman-btns'>{gameState}</p>
+            <button id='reset' onClick={this.reset}>
+              Restart
+            </button>
+          </div>
+        </div>
       </div>
     )
   }
